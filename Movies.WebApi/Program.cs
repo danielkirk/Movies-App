@@ -12,7 +12,6 @@ namespace Movies.WebApi
             builder.Services.AddAuthorization();
             builder.Services.AddApplication();
 
-
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
