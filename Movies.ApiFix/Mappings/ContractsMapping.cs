@@ -17,6 +17,17 @@ namespace Movies.ApiFix.Mappings
             };
         }
 
+        public static Movie MapToMovie(this UpdateMovieRequest request, Guid id)
+        {
+            return new Movie
+            {
+                Id = id,    
+                Title = request.Title,
+                Genres = request.Genres.ToList(),
+                YearOfRelease = request.YearOfRelease
+            };
+        }
+
         public static MovieResponse MapToResponse(this Movie movie)
         {
             return new MovieResponse

@@ -16,9 +16,9 @@ namespace Movies.Application.Repositories
             return Task.FromResult(true);
         }
 
-        public Task<bool> DeleteAsync(Movie movie)
+        public Task<bool> DeleteAsync(Guid id)
         {
-            var removedCount = _movies.RemoveAll(x => x.Id == movie.Id);
+            var removedCount = _movies.RemoveAll(x => x.Id == id);
             var movieRemoved = removedCount > 0;
             return Task.FromResult(movieRemoved);
         }
