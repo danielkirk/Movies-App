@@ -34,6 +34,7 @@ namespace Movies.ApiFix.Mappings
             {
                 Id = movie.Id,
                 Title = movie.Title,
+                Slug= movie.Slug,
                 Genres = movie.Genres,
                 YearOfRelease = movie.YearOfRelease
             };
